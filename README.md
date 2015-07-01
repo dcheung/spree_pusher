@@ -26,8 +26,8 @@ All the configuration is done inside the initializer here: `config/initializers/
 Sets the credentials for the API calls.
 
 To set the credentials for all the requests
-```ruby
 
+```ruby
 # Wombat
 Spree::Pusher::Config.configure do |config|
   config.credentials = {
@@ -37,7 +37,6 @@ Spree::Pusher::Config.configure do |config|
 end
 
 # Azure Logic Apps
-
 Spree::Pusher::Config.configure do |config|
   config.credentials = { 
     :access_key, "ACCESS_KEY"
@@ -62,7 +61,9 @@ config.payload_builder = {
 
 By default, all objects are pushed to Wombat. To push them elsewhere, such as Azure Logic Apps, you can set pusher_client
 
+```ruby
 config.pusher_client = "Spree::Pusher::AzureLogicAppClient"
+```
 
 You can also specify `:pusher_client` in the payload_builder
 
