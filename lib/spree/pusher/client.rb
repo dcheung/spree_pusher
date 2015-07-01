@@ -48,8 +48,6 @@ module Spree
       end
       
       private
-      #def self.for
-
       def self.format_batch(batch, payload_builder)
         raise "NotImplementedException"
       end
@@ -59,9 +57,6 @@ module Spree
       end
 
       def self.update_last_pushed(object, new_last_pushed)
-        # *******************************************************************************
-        return # TODO: Remove before checkin
-        # *******************************************************************************
         last_pushed_ts = Spree::Pusher::Config[:last_pushed_timestamps]
         last_pushed_ts[object] = new_last_pushed
         Spree::Pusher::Config[:last_pushed_timestamps] = last_pushed_ts
