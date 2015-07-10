@@ -16,7 +16,7 @@ module Spree
         return {
           body: json_payload,
           headers: {
-           'Content-Type'       => 'application/json',
+           'Content-Type' => 'application/json',
           }
         }
       end
