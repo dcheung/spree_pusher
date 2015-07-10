@@ -6,6 +6,7 @@ module Spree
 end
 
 require 'spree/pusher/azure_logic_app_client'
+require 'spree/pusher/no_auth_api_client'
 require 'spree/pusher/wombat_client'
 require 'spree/pusher/client'
 require 'spree/pusher/engine'

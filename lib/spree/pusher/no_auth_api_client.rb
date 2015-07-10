@@ -2,7 +2,7 @@ require 'spree/pusher/client'
 
 module Spree
   module Pusher
-    class WombatClient < Client
+    class NoAuthApiClient < Client
       private
       def self.format_batch(batch, payload_builder)
         return ActiveModel::ArraySerializer.new(
@@ -17,9 +17,6 @@ module Spree
           body: json_payload,
           headers: {
            'Content-Type'       => 'application/json',
-           'X-Hub-Store'        => credentials[:connection_id],
-           'X-Hub-Access-Token' => credentials[:connection_token],
-           'X-Hub-Timestamp'    => Time.now.utc.to_i.to_s
           }
         }
       end
